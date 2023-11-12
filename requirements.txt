@@ -1,0 +1,3 @@
+flask~=3.0.0
+adafruit-circuitpython-bh1750
+Adafruit_DHT
