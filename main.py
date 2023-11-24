@@ -1,5 +1,5 @@
 from board import I2C
-from flask import Flask
+from flask import Flask, Response
 import board
 import adafruit_dht as DHT
 import adafruit_bh1750 as BH1750
@@ -18,7 +18,7 @@ def main():
 #    humi = '{0:0.1f}'.format(dht_device.humidity)
 #    temp = '{0:0.1f}'.format(dht_device.temperature)
     lux = "{0:0.1f}".format(lux)
-    return '{"lux":' + lux + '}'
+    return Response('{"lux":' + lux + '}', mimetype='application/json')
 
 
 if __name__ == "__main__":
